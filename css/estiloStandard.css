@@ -1,0 +1,106 @@
+body {
+    font-family: "Economica", sans-serif; 
+ }
+
+#hlist{
+ list-style-type: none;
+ width:100%;
+ background-color: #81AB85;
+ color: white;
+ font-weight: bold;
+}
+ 
+.sidenav {
+   height: 100%;
+   width: 0;
+   z-index: 1;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: #EBEBEB;
+   overflow-x: hidden;
+   transition: 0.5s;
+   padding-top: 60px;
+ }
+ 
+ .sidenav a {
+   padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-size: 25px;
+   color: #425C44;
+   display: block;
+   transition: 0.3s;
+ }
+ 
+ .sidenav a:hover {
+   color: #81AB85;
+ }
+ 
+ .sidenav .closebtn {
+   position: absolute;
+   top: 0;
+   right: 25px;
+   font-size: 36px;
+   margin-left: 50px;
+ }
+
+.cover{
+  margin-left:200px;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+ 
+}
+
+.flex-container > .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    border-radius: 12px;
+
+  }
+
+
+.botao {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #81AB85;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.botao:hover, a:hover {
+  opacity: 0.7;
+}
+
+.imgcard {
+   border-radius: 12px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+p{
+  font-size:20px;
+}
+
+ 
+ @media screen and (max-height: 450px) {
+   .sidenav {padding-top: 15px;}
+   .sidenav a {font-size: 18px;}
+ }
+
+
+
+
+ 

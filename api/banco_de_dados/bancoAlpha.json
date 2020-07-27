@@ -1,0 +1,143 @@
+{
+    "sequencias": {
+        "seqSalas": 1,
+        "seqComputadores": 1,
+        "seqSistemasOperacionais": 1,
+        "seqSoftwares": 1,
+        "seqUsuarios": 2,
+        "seqAtendimentos": 1,
+        "seqTurmas": 1,
+        "seqCursos": 1,
+        "seqReservas": 1,
+        "seqHorarios": 1
+    },
+    "salas": [
+        {
+            "idSala": "",
+            "qtdCadeiras": ""
+        }
+    ],
+    "computadores": [
+        {
+            "idComputador": "",
+            "idSala": "",
+            "processador": "",
+            "tamMemoriaRAM": "",
+            "tamMemoriaDisco": "",
+            "placaDeVideo": "",
+            "tamMemoriaPlacaDeVideo": ""
+        }
+    ],
+    "sistemasOperacionais": [
+        {
+            "idSistemaOperacional": "",
+            "nome": "",
+            "versao": "",
+            "bits": ""
+        }
+    ],
+    "computadoresXsistemasOperacionais": [
+        {
+            "idComputador": "",
+            "idSistemaOperacional": ""
+        }
+    ],
+    "softwares": [
+        {
+            "idSoftware": "",
+            "nomeSoftware": "",
+            "versaoSoftware": "",
+            "dataInicioLicenca": "",
+            "dataExpiracaoLicenca": ""
+        }
+    ],
+    "computadoresXsoftwares": [
+        {
+            "idComputador": "",
+            "idSoftware": ""
+        }
+    ],
+    "usuarios" : [
+        {
+            "idUsuario" : 1,
+            "prontuarioUsuario" : "SPXXXXXX",
+            "nomeUsuario": "Giovanni Dilly",
+            "senhaUsuario": "senhaAdministrador1",
+            "sexoUsuario": "M",
+            "tipoUsuario": "administrador",
+            "nomeArquivoFoto": "generico/generic_user_male.png",
+            "permissoes": [
+                "administrador", "tecnico", "professor"
+            ]
+        }
+    ],
+    "atendimentos": [
+        {
+            "idAtendimento": "",
+            "dataAtendimento": "",
+            "importancia": "",
+            "descricao": "",
+            "status": ""
+        }
+    ],
+    "turmas": [
+        {
+            "idTurma": "",
+            "idCurso": "",
+            "idProfessor": "",
+            "turnoTurma": "",
+            "anoLetivo": ""
+        }
+    ],
+    "cursos": [
+        {
+            "idCurso": "",
+            "nomeCurso": "",
+            "descricao": ""
+        }
+    ],
+    "reservas": [
+        {
+            "idReserva": "",
+            "dataReserva": "",
+            "dataReservaEfetivo": "",
+            "idProfessor": "",
+            "idSala": "",
+            "qtdSemanasReserva": ""
+        }
+    ],
+    "horarios": [
+        {
+            "idHorario": "",
+            "idReserva": "",
+            "periodoInicio": "",
+            "periodoTermino": "",
+            "diaDaSemana": ""
+        }
+    ],
+    "tipoEventoCalendario" : [
+        {
+
+        }
+    ],
+    "datasCalendarioGeral" : [
+        {
+            "ano" : "",
+            "mes" : "",
+            "dia" : "",
+            "idTipoEvento" : "",
+            "descricao" : ""
+        }
+    ],
+    "datasCalendarioPessoal" : [
+        {
+            "idUsuario" : "",
+            "anoData" : "",
+            "mesData" : "",
+            "diaData" : "",
+            "idTipoEvento" : "",
+            "descricao" : ""
+        }
+    ]
+
+}

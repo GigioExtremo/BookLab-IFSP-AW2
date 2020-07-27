@@ -1,0 +1,183 @@
+body {
+    font-family: "Economica", sans-serif; 
+    background-color:rgb(245, 245, 245);
+}
+
+ 
+.sidenav{
+    background-color:#81AB85;
+    height:100%;
+    width:15%;
+    border-radius:12px;
+    position: absolute;
+}
+
+.id{
+    color:white;
+    font-size:18px;
+    text-align:center;
+    margin-top:5px;
+}
+
+.userprofile img{
+    margin-top:50px;
+    margin-left:63px;
+}
+
+.content{
+    margin-top:70px;
+    font-size:25px;
+    text-align:center;
+}
+.content a{
+ text-decoration:none;
+ color:white;
+}
+
+.content a:hover{
+    color: rgb(216, 245, 218);
+}
+
+.overall{
+    width:80%;
+    height:23%;
+    background-color:white;
+    border-radius:12px;
+    margin-left:240px;
+    align-items:center;
+    justify-content: center;
+}
+
+.info{
+    margin-left:70px;
+    background-color:rgb(255, 210, 217);
+    width:180px;
+    height:90px;
+    margin-top:10px;
+    float:left;
+    border-radius:12px;
+    box-shadow:rgb(241, 170, 181);
+}
+
+.title{
+    font-weight:bold;
+    font-size:23px;
+    color:rgb(58, 58, 58);
+    width: 100%;
+    background-color: rgb(235, 233, 233);
+    text-align: center;
+}
+
+.calendar{
+    background-color:white;
+    height:35%;
+    width:50%;
+    border-radius:12px;
+    margin-left:240px;
+
+}
+
+.req-sum{
+    background-color:white;
+    height:30%;
+    width:80%;
+    border-radius:12px;
+    margin-left:240px;
+}
+
+.naosei{
+    float:right;
+    background-color:rgb(138, 8, 8);
+    height:35%;
+    width:25%;
+    border-radius:12px;
+    margin-top:-250px;
+    display:none;
+
+}
+
+table{
+    color:rgb(41, 41, 41);
+    font-size:30px;
+    text-align: center;
+}
+
+
+th{
+border-bottom:gray 1px solid;
+}
+.weekdays{
+    color:rgb(199, 0, 66);
+    font-weight: bold;
+}
+
+.data-title{
+    font-size:20px;
+    font-weight:bold;   
+    color:rgb(199, 0, 66);
+}
+
+.request{
+    margin-left:20px;
+}
+
+td{
+    width:100px;
+    text-align: center;
+    font-size:20px;
+    width:100px;
+    margin-left:20px;   
+    color:rgb(92, 90, 90);
+}
+
+.desc{
+    width:500px;
+}
+.status{
+    width:100px;
+}
+
+.overall img{
+    margin-top:8px;
+    float:right;
+    margin-right:5px;
+}
+ @media screen and (max-height: 450px) {
+   .sidenav {padding-top: 15px;}
+   .sidenav a {font-size: 18px;}
+ }
+
+/*  Rodape */
+
+.rodape_final{
+    background-color:#81AB85;
+    color:white;
+    display:flex;
+    justify-content: space-around;
+    height: 120px;
+    width: 110%;
+    bottom:0;
+    float: bottom;
+}
+
+.div_rod{
+    font-size: 20px;
+    width:28%;
+    margin: 20px;
+    padding: 0px 25px 25px;
+}
+
+.email{
+    display:flex ;
+}
+
+.telefone{
+    display: flex;
+}
+
+.direit_rod{
+    width:28%;
+    margin: 10px;
+    padding: 90px 25px 25px;
+    font-size: 15px;
+}

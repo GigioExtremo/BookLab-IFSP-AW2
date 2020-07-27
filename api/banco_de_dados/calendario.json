@@ -1,0 +1,46 @@
+{
+    "tiposEventosDatasGeral": [
+        {
+            "idTipoEventoData": 1,
+            "tipo" : "Feriados Federais",
+            "descricao" : "Feriados aplicados em todo país",
+            "codCorHex" : ""
+        },
+        {
+            "idTipoEventoData": 2,
+            "tipo" : "Feriados Estaduais",
+            "descricao": "Feriados aplicados no estado de São Paulo",
+            "codCorHex" : ""
+        },
+        {
+            "idTipoEventoData": 3,
+            "tipo" : "Feriados Municipais",
+            "descricao" : "Feriados aplicados no município de São Paulo",
+            "codCorHex" : ""
+        },
+        {
+            "idTipoEventoData": 4,
+            "tipo" : "Eventos Escolares",
+            "descricao" : "Eventos escolares organizados pelo grêmio ou pela reitoria",
+            "codCorHex" : ""
+        },
+        {
+            "idTipoEventoData": 5,
+            "tipo" : "Semestre Letivo",
+            "descricao" : "Data relacionadas aos semestres letivos do IFSP Câmpus São Paulo",
+            "codCorHex" : ""
+        },
+        {
+            "idTipoEventoData": 6,
+            "tipo" : "Outros",
+            "descricao" : "Outros",
+            "codCorHex" : ""
+        }
+    ],
+    "datasCalendarioGeral" : [
+
+    ],
+    "datasCalendarioPessoal" : [
+
+    ]
+}
