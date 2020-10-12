@@ -1,0 +1,32 @@
+.rodape_final{
+    background-color:#81AB85;
+    color:white;
+    display:flex;
+    justify-content: space-around;
+    height: 120px;
+    width: 110%;
+    bottom:0;
+    float: bottom;
+}
+
+.div_rod{
+    font-size: 20px;
+    width:28%;
+    margin: 20px;
+    padding: 0px 25px 25px;
+}
+
+.email{
+    display:flex ;
+}
+
+.telefone{
+    display: flex;
+}
+
+.direit_rod{
+    width:28%;
+    margin: 10px;
+    padding: 90px 25px 25px;
+    font-size: 15px;
+}

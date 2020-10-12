@@ -1,0 +1,203 @@
+
+.container{
+    color:black;
+    background-color: white;
+    border-radius: 12px;
+    margin-left:20%;
+    height:auto;
+    width:auto;  
+}
+
+table{
+margin-left:20px;
+}
+
+td{
+    text-align:center;
+    font-size:18px;
+}
+
+.title{
+    color:rgba(47, 179, 76, 0.801);
+    font-size:23px;
+    font-weight:bold;
+    margin-left:20px;
+    margin-top:20px;
+}
+
+.data-title{
+    font-size:20px;
+    font-weight:bold;    
+}
+
+.request{
+    margin-left:20px;
+}
+
+td{
+    text-align: center;
+    height:50px;
+    
+}
+tr{
+    border-bottom: solid 1px lightgray;
+}
+.status{
+    width:100px;
+}
+.title{
+   font-weight:bold;
+    color:rgb(221, 37, 68);
+    font-size:25px;
+    text-align:left;
+}
+
+.subtitle{
+    color:rgb(61, 61, 61);
+    font-weight:bold;
+    font-size:20px;
+    text-align:left;
+    display:flex;
+    margin-left:20px;
+}
+
+
+.desc{
+    color:rgb(61, 61, 61);
+    font-weight:bold;
+    font-size:18px;
+    text-align:center;
+    width:150px;
+}
+
+.status{
+    color:rgb(61, 61, 61);
+    font-weight:bold;
+    font-size:18px;
+    text-align:left;
+    width:100%;
+    margin-left:20px;
+}
+
+.answer{
+    width:500px;
+}
+
+.response a {
+    text-decoration:none; 
+    color:rgb(214, 41, 70);
+    margin-left:20px;
+    font-size:20px;
+}
+
+.response a:hover{
+  color:pink;
+}
+
+.resp-tec{
+    display:none;
+}
+
+.i-resposta{
+    display:none;
+}
+
+
+.resposta{
+    width:500px;
+    height:300px;
+    border:2px solid rgb(197, 197, 197);
+    border-radius:12px;
+    background-color:white;
+    display: none;
+}
+
+select{
+    width:300px;
+    height:auto;
+    text-align:center;
+    font-size:18px;
+    font-family: "Economica", sans-serif; 
+}
+
+.responder{
+background-color:rgb(12, 177, 12);
+color:white;
+width:200px;
+height:40px;
+border: 1px solid transparent;
+font-family: "Economica", sans-serif; 
+font-size:20px;
+border-radius:12px;
+margin-left:160px;
+cursor: pointer;
+}
+
+.instrucao{
+    color:rgb(255, 32, 69);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.radio-option{
+    color:rgb(66, 66, 66);
+    font-size: 18;
+    font-weight: bold;
+}
+
+.content-resp{
+    margin-left:20px;
+}
+
+.instrucao2{
+    color:#5a775d;
+    font-size:16px;
+    font-weight: bold;
+}
+
+.aceita{
+    display:none;
+}
+
+.pendente{
+    display:none;
+}
+
+.indeferida{
+    display:none;
+}
+
+.resp-container{
+    display: none;
+    margin-top:20px;
+}
+
+.resp-requisicao-aceita, 
+.resp-requisicao-analise,
+.resp-requisicao-indeferida{
+display:none;
+}
+
+.add{
+background-color:white;
+border:1px solid white;
+color:rgb(255, 32, 69)
+}
+
+.addLabel{
+font-weight:bold;
+color:rgb(66, 66, 66)
+}
+@media screen and (max-width: 800px) {
+.container{
+    margin-left:auto;
+}
+.responder{
+    margin-left:50px;
+}
+
+.resposta{
+    width:90%;
+}
+    }
+    

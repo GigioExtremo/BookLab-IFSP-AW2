@@ -1,0 +1,114 @@
+body {
+    font-family: "Economica", sans-serif; 
+    background-color:rgb(245, 245, 245);
+}
+
+ 
+.sidenav{
+    background-color:#81AB85;
+    height:100%;
+    width:15%;
+    border-radius:12px;
+    position: absolute;
+}
+
+.user2{
+    margin-bottom:15px;
+    margin-left:35%;
+}
+
+.id{
+    color:white;
+    font-size:18px;
+    text-align:center;
+    margin-top:5px;
+}
+
+.userprofile img{
+    margin-top:70px;
+    margin-left:63px;
+    margin-bottom:45px;
+    margin-left:35%;
+}
+
+.content{
+    margin-top:70px;
+    font-size:25px;
+    text-align:center;
+}
+.content a{
+ text-decoration:none;
+ color:white;
+}
+
+.content a:hover{
+    color: rgb(216, 245, 218);
+}
+
+.cad-area{
+margin-top:50px;
+width:500px;
+height:520px;
+margin-left:40%;
+background-color: white;
+border-radius:12px;
+margin-top:15px;
+font-size:20px;
+}
+
+input[type="text"], [type="password"]{
+    font-family: "Economica", sans-serif; 
+    width:90%;
+    height:30px;
+    border:1px solid rgb(136, 136, 136);
+    border-radius: 5px 5px;
+}
+
+select{
+    font-family: "Economica", sans-serif; 
+    width:90%;
+    height:30px;
+    border:1px solid rgb(136, 136, 136);
+    border-radius: 5px 5px;
+
+}
+
+form{
+    margin-left:10%;
+}
+input[type='file'] {
+    display: none
+  }
+
+input[type='submit'] {
+border-radius:5px 5px;
+background-color: rgb(52, 224, 52);
+color:white;
+width: 80px;
+height:30px;
+border:none;
+margin-left:35%;
+font-family: "Economica", sans-serif; 
+font-size:18px;
+  }
+  
+  /* Aparência que terá o seletor de arquivo */
+  #foto {
+    margin-left:35%;
+    background-color:pink;
+    width:70px;
+    height:15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    padding: 6px 20px;
+    border:none;
+    color:white;
+    font-size:16px;
+  }
+
+ @media screen and (max-height: 450px) {
+   .sidenav {padding-top: 15px;}
+   .sidenav a {font-size: 18px;}
+ }
+

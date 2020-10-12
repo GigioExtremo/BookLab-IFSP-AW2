@@ -10,7 +10,6 @@
     width: 80%;  
 }
 
-
 table{
 margin-right:25px;
 width:100%;
@@ -38,21 +37,15 @@ td{
     text-align: center;
 }
 
-.desc{
-    width:300px;
-}
-.status{
-    width:100px;
-}
-
 .pesquisar{
     width:500px;
     float:left;
     margin-left:20%;
     margin-bottom:30px;
+    margin-top:20px;
     display: flex;
     flex-direction: row;
-    margin-top:20px;
+
 }
 
 .pesq{
@@ -74,6 +67,12 @@ td{
 .info{
     font-size:18px;
     color:gray;
+}
+
+.info-cancelamento{
+    color:red;
+    font-size:20px;
+    font-weight:bold;
 }
 
 .acoes{

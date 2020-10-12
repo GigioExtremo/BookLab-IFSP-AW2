@@ -54,7 +54,7 @@ body {
 
 form {border: 3px solid #f1f1f1;}
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=date] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -101,6 +101,31 @@ span.psw {
   padding-top: 16px;
 }
 
+.logo{
+  margin-top:-50px;
+}
+
+.user{
+  margin-left:80px;
+}
+
+.prontuario{
+  color:#425C44;
+  font-size:16px;
+  font-weight: bold;
+  margin-left:15px;
+}
+
+.footer{
+  background-color:#5f8162;
+  height:150px;
+  width:100%;
+  color:white;
+  font-size:18px;
+  text-align: center;
+  bottom:0;
+}
+
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {
@@ -113,42 +138,9 @@ span.psw {
 }
  
  
- @media screen and (max-height: 450px) {
-   .sidenav {padding-top: 15px;}
-   .sidenav a {font-size: 18px;}
+ @media screen and (max-width: 600px) {
+  .container-form{
+    margin-left:5px;
+    margin-right:5px;
+}
  }
-
-/*  Rodape */
-
-.rodape_final{
-    background-color:#81AB85;
-    color:white;
-    display:flex;
-    justify-content: space-around;
-    height: 120px;
-    width: 110%;
-    bottom:0;
-    float: bottom;
-}
-
-.div_rod{
-    font-size: 20px;
-    width:28%;
-    margin: 20px;
-    padding: 0px 25px 25px;
-}
-
-.email{
-    display:flex ;
-}
-
-.telefone{
-    display: flex;
-}
-
-.direit_rod{
-    width:28%;
-    margin: 10px;
-    padding: 90px 25px 25px;
-    font-size: 15px;
-}

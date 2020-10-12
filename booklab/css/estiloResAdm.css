@@ -1,0 +1,198 @@
+body {
+    font-family: "Economica", sans-serif; 
+    background-color:rgb(245, 245, 245);
+}
+
+.sidenav {
+    height:100%;
+    width:250;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    background-color:#81AB85;
+    border-radius:12px;
+  }
+
+  .sidenav a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #425C44;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #81AB85;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+a#closebtn{
+    display: none;
+}
+ 
+.user{
+  margin-left:90px;
+  margin-top:40px;
+  margin-bottom:-50px;
+}
+
+.prontuario{
+    color:white;
+    margin-left:15px;
+}
+
+.content{
+    margin-top:70px;
+    font-size:25px;
+    text-align:center;
+}
+.content a{
+ text-decoration:none;
+ color:white;
+}
+
+.content a:hover{
+    color: rgb(216, 245, 218);
+}
+
+table{
+    text-align:center;
+    margin-top:5%;
+    margin-right:5%;
+    padding:5px;
+    margin-left:5%;
+}
+
+td{
+    width:200px;
+    color:rgb(39, 39, 39);
+    font-size:18px;
+    padding: 12px;
+}
+
+
+
+th, td {
+border-bottom: 1px solid #ddd;
+}
+
+
+.container-req{
+    margin-left:20%;
+    background-color:white;
+    border-radius:12px;
+    height:100%;
+    width:80%;
+
+}
+.title{
+    margin-top:50px;
+    color:rgb(255, 28, 66);
+    font-size:30px;
+    font-weight: bold;
+    width:100%;
+    height:20px;
+}
+
+.desc{
+    width:500px;
+}
+
+.date, .cod, .imp, .desc-title, .status, .edit{
+    color:rgb(255, 28, 66);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#hlist{
+    height:600px;
+  
+}
+
+@media (max-width: 767px) { 
+  
+  .table-responsive {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  .table-responsive thead,
+  .table-responsive tbody,
+  .table-responsive th,
+  .table-responsive td,
+  .table-responsive tr {
+    display: block;
+  }
+  .table-responsive td,
+  .table-responsive th {
+    height: 35px;
+  }
+
+  .table-responsive thead {
+    float: left;
+  }
+
+  .table-responsive tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+
+  .table-responsive tbody tr {
+    display: inline-block;
+  }
+
+  .table-title{
+      font-size:17px;
+  }
+  table{
+      font-size:16px;
+      margin-left:1px;
+  }
+
+  a#closebtn{
+    display: block;
+    color:white;
+}
+
+button{
+  float:right;
+}
+
+.sidenav{
+    height:auto;
+}
+
+.container-req{
+    margin-left:5px;
+    width:100%;
+
+}
+
+#hlist{
+    list-style-type: none;
+    float:left;
+    width:50px;
+    height:50px;
+  
+}
+ #menu{
+    color:white;
+    background-color:#81AB85;
+ }
+
+}

@@ -62,7 +62,6 @@ body {
     text-align: center;
     justify-content: center;
     border-radius: 12px;
-    margin-top:20px;
 
   }
 
@@ -110,6 +109,14 @@ p{
   margin-left:15px;
 }
 
+p#titulo{
+    font-size:40px;
+    color:#425C44;
+    border-bottom: red 3px solid;
+    border-bottom-width:50%;
+    margin-top:-10px;
+ } 
+
 .footer{
   background-color:#5f8162;
   height:150px;
@@ -118,23 +125,29 @@ p{
   font-size:18px;
   text-align: center;
   bottom:0;
+  position: absolute;
 }
+
+table{
+    width:90%;
+    text-align: center;
+    font-size:20px;
+  }
+  
+  .title{
+    font-weight: bold;
+    color:red;
+    font-size:22px;
+  }
+  
+  table{
+    margin-left:45px;
+  }
+
  
  @media screen and (max-height: 450px) {
    .sidenav {padding-top: 15px;}
    .sidenav a {font-size: 18px;}
+   table{margin-left:0%;}
  }
 
- @media screen and (max-width: 800px) {
-
-  .cover{
-    margin-left:0px;
-  }
-
-  .cover img{
-    width:500px;
-    height:300px;
-  }
-
-
- }

@@ -1,143 +1,196 @@
 body {
-    font-family: "Economica", sans-serif; 
- }
+  font-family: "Economica", sans-serif; 
+}
 
 #hlist{
- list-style-type: none;
- width:100%;
- background-color: #81AB85;
- color: white;
- font-weight: bold;
+list-style-type: none;
+width:100%;
+background-color: #81AB85;
+color: white;
+font-weight: bold;
 }
- 
+
 .sidenav {
-   height: 100%;
-   width: 0;
-   z-index: 1;
-   position: absolute;
-   top: 0;
-   left: 0;
-   background-color: #EBEBEB;
-   overflow-x: hidden;
-   transition: 0.5s;
-   padding-top: 60px;
- }
- 
- .sidenav a {
-   padding: 8px 8px 8px 32px;
-   text-decoration: none;
-   font-size: 25px;
-   color: #425C44;
-   display: block;
-   transition: 0.3s;
- }
- 
- .sidenav a:hover {
-   color: #81AB85;
- }
- 
- .sidenav .closebtn {
-   position: absolute;
-   top: 0;
-   right: 25px;
-   font-size: 36px;
-   margin-left: 50px;
- }
+ height: 100%;
+ width: 0;
+ z-index: 1;
+ position: absolute;
+ top: 0;
+ left: 0;
+ background-color: #EBEBEB;
+ overflow-x: hidden;
+ transition: 0.5s;
+ padding-top: 60px;
+}
 
- p#titulo{
-     font-size:40px;
-     color:#425C44;
-     border-bottom: red 3px solid;
-     border-bottom-width:50%;
-     margin-top:-10px;
- }
+.sidenav a {
+ padding: 8px 8px 8px 32px;
+ text-decoration: none;
+ font-size: 25px;
+ color: #425C44;
+ display: block;
+ transition: 0.3s;
+}
 
- input[type="text"]{
-     border-radius:5px 5px 5px;
-     width:500px;
-     height:40px; 
-     border:1px rgb(122, 122, 122) solid;
-     margin-left:400px;
-     margin-bottom:20px;
-    
- }
- .flex-container {
-    display: flex;
-    flex-flow: row wrap;
-   
-  }
+.sidenav a:hover {
+ color: #81AB85;
+}
+
+.sidenav .closebtn {
+ position: absolute;
+ top: 0;
+ right: 25px;
+ font-size: 36px;
+ margin-left: 50px;
+}
+
+p#titulo{
+   font-size:40px;
+   color:#425C44;
+   border-bottom: red 3px solid;
+   border-bottom-width:50%;
+   margin-top:-10px;
+}
+
+input[type="text"]{
+   border-radius:5px 5px 5px;
+   width:500px;
+   height:40px; 
+   border:1px rgb(122, 122, 122) solid;
+   margin-left:400px;
+   margin-bottom:20px;
   
-  .flex-container > .card {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      max-width: 300px;
-      margin: auto;
-      text-align: center;
-      justify-content: center;
-      border-radius: 12px;
-    }
-  
-  
-  button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #81AB85;
+}
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+ 
+}
+
+.flex-container > .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
     text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
+    justify-content: center;
+    border-radius: 12px;
   }
-  
-  button:hover, a:hover {
-    opacity: 0.7;
+  .lab{
+    border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color:rgb(85, 255, 85);
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+
   }
-  
-  .imgcard {
-     border-radius:12px;
-     display: block;
-     margin-left: auto;
-     margin-right: auto;
-  }
-  
+
+
+.title{
+  color:rgb(255, 31, 69);
+  font-weight: bold;
+  font-size:20px;
+}
  
- @media screen and (max-height: 450px) {
-   .sidenav {padding-top: 15px;}
-   .sidenav a {font-size: 18px;}
+.resp{
+  font-weight: bold;
+  font-size:20px;
+}
+
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #81AB85;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+
+.imgcard {
+   border-radius:12px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   height:200px;
+   
+}
+
+button#abrir-modal{
+  width:200px;
+  background-color:white;
+  border:2px solid rgb(82, 73, 95);
+  color:rgb(82, 73, 95);
+  margin-left:20%;
+}
+
+.logo{
+  margin-top:-50px;
+}
+
+.user{
+  margin-left:80px;
+}
+
+.prontuario{
+  color:#425C44;
+  font-size:16px;
+  font-weight: bold;
+  margin-left:15px;
+}
+
+.footer{
+  background-color:#5f8162;
+  height:150px;
+  width:100%;
+  color:white;
+  font-size:18px;
+  text-align: center;
+  bottom:0;
+}
+ .close{
+   float:right;
+   width:10px;
  }
 
-/*  Rodape */
+ .datahoracont{
+   display: none;
+ }
 
-.rodape_final{
-    background-color:#81AB85;
-    color:white;
-    display:flex;
-    justify-content: space-around;
-    height: 120px;
-    width: 110%;
-    bottom:0;
-    float: bottom;
+ .numerocont{
+  display: none;
+ }
+
+ label{
+   color:rgb(255, 31, 69);;
+   font-size:18px;
+   font-weight:bold;
+ }
+
+ #numero-input, .date, .time{
+   width:100%;
+   border:1px solid lightgray;
+ }
+
+@media screen and (max-height: 450px) {
+ .sidenav {padding-top: 15px;}
+ .sidenav a {font-size: 18px;}
 }
 
-.div_rod{
-    font-size: 20px;
-    width:28%;
-    margin: 20px;
-    padding: 0px 25px 25px;
-}
-
-.email{
-    display:flex ;
-}
-
-.telefone{
-    display: flex;
-}
-
-.direit_rod{
-    width:28%;
-    margin: 10px;
-    padding: 90px 25px 25px;
-    font-size: 15px;
+@media screen and (max-width:768px){
+  .card{
+    margin-bottom:20px;
+  }
 }

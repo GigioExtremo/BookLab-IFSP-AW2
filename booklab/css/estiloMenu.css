@@ -4,7 +4,7 @@ body {
 }
 
 .sidenav {
-    height: 100%;
+    height:auto;
     width:250;
     z-index: 1;
     position: absolute;
@@ -23,7 +23,7 @@ body {
     color: #425C44;
     display: block;
     transition: 0.3s;
-    margin-bottom:20px;
+    margin-bottom:25px;
   }
   
   .sidenav a:hover {
@@ -70,98 +70,73 @@ body {
     color: rgb(216, 245, 218);
 }
 
-.container{
-    width:80%;
-    height:auto;
-    /* border-radius:12px; 
-    background-color:white; */
-    margin-left:18%;
-}
-
-.flex-container{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.card{
-    width:230px;
-    height:250px;
-    background-color: white;
-    margin-right:60px;
-    border-radius:12px;
-    margin-bottom:50px;
-    -moz-box-shadow: 5px 5px 5px #979797;
-}
-
-.info{
+.hmenu{
+    float:right;
     width:100%;
-    height:45%;
-    border-radius:5px;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    background-color:rgb(255, 227, 232);
 }
 
-.title{
-    font-weight: bold;
-    color:rgb(255, 50, 84);
+.hmenu ul li{
+list-style-type:none;
+display:inline;
+}
+
+.hmenu ul li:hover{
+    color:rgb(245, 245, 245);
+}
+
+.hmenu ul li a {
+    text-decoration:none;
+    color:black;
     font-size:20px;
+    float:right;
+    margin-bottom:10px;
+    margin-right:10px;
 }
-
-.about{
-    font-weight: bold;
+.hmenu ul li a:hover{
+color:gray;
 }
-
-.img-container{
-    margin-left:60px;
-}
-
-img#imgphoto{
-margin-top:20px;
-margin-left:5px;
-}
-
-img#imgxampp{
-    margin-top:20px;
-    margin-left:05px;
-}
-
 a#closebtn{
     color:white;
     display: none;
 }
 
-@media (max-width: 768px) { 
+#hlist{
+    display:none;
+}
+
+@media (max-width: 768px) {
     a#closebtn{
         display: block;
         color:white;
-    }
-    
-    .sidenav{
-        height:auto;
-    }
-    
-    .container{
-        margin-left:5px;
-        width:100%;
 }
+    
+.sidenav{
+height:auto;
+}
+    
 
 a#closebtn{
-    display: block;
+display: block;
 }
     
-    #hlist{
-     width:0px;
-     list-style-type: none;
+#menu{
+color:white;
+ background-color:#81AB85;
+}
+
+.sidenav{
+ height:auto;
+}
+
+#hlist{
+width:0px;
+list-style-type: none;
+display: block;
+   }
+    #menu{
+       color:white;
+       background-color:#81AB85;
     }
-     #menu{
-        color:white;
-        background-color:#81AB85;
-     }
 
 }
 

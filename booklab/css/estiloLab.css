@@ -1,84 +1,99 @@
-body {
-    font-family: "Economica", sans-serif; 
-    background-color:rgb(245, 245, 245);
+
+.lab-content{
+background-color:white;
+border-radius:12px;
+width:100%;
+height:auto;
+display:flex;
+margin-bottom:20px;
+margin-left:13%;
 }
 
- 
-.sidenav{
-    background-color:#81AB85;
-    height:100%;
-    width:15%;
-    border-radius:12px;
-    position: absolute;
+.titulo{
+    color:rgb(255, 0, 85);
+    font-weight: bold;
+    font-size:20px;
+    margin-right:20px;
 }
 
-.id{
-    color:white;
+.info{
+font-size:20px;
+align-items: center;
+}
+
+select{
+    width:80%;
+    height:30px;
+}
+
+.title{
+    color:rgb(255, 0, 85);
+    font-weight: bold;
+    font-size:23px;
+}
+.conteudo{
+    align-items:center;
+    margin-left:80px;
+}
+.subtitle{
+    font-weight: bold;
     font-size:18px;
-    text-align:center;
-    margin-top:5px;
 }
 
-.userprofile img{
-    margin-top:50px;
-    margin-left:63px;
+.pesquisar{
+    width:500px;
+    float:left;
+    margin-left:20%;
+    margin-bottom:30px;
+    margin-top:20px;
+    display: flex;
+    flex-direction: row;
+
 }
 
-.content{
-    margin-top:70px;
-    font-size:25px;
-    text-align:center;
-}
-.content a{
- text-decoration:none;
- color:white;
+.pesq{
+    width:60%;
+    height:auto;
+    background-color:white;
+    border:0.5px solid lightgray;
+    border-radius:3px 3px;
 }
 
-.content a:hover{
-    color: rgb(216, 245, 218);
+.pesq2{
+    background-color:rgb(81, 189, 9);
+    border-radius: 3px 3px;
+    color:white;
+    border: 1px solid rgb(81, 189, 9) 
 }
 
-
-
-
+.enviar{
+    width:30px;
+    height:30px;
+    background-color:rgb(81, 189, 9);
+    border-radius: 3px 3px;
+    color:white;
+    border: 1px solid rgb(81, 189, 9)
+}
 
  @media screen and (max-height: 450px) {
    .sidenav {padding-top: 15px;}
    .sidenav a {font-size: 18px;}
  }
 
+ @media screen and (max-width:768px){
 
-/*  Rodape */
-
-.rodape_final{
-    background-color:#81AB85;
-    color:white;
-    display:flex;
-    justify-content: space-around;
-    height: 120px;
-    width: 110%;
-    position: absolute;
-    bottom: 0;
+.lab-content{
+ display: flex;
+flex-flow: row wrap;
+background-color:white;
+height:40%;
+margin-left:15px;
 }
 
-.div_rod{
-    font-size: 20px;
-    width:28%;
-    margin: 20px;
-    padding: 0px 25px 25px;
+.pesquisar{
+    width:100%;
+    margin-left:20px;
 }
 
-.email{
-    display:flex ;
 }
 
-.telefone{
-    display: flex;
-}
-
-.direit_rod{
-    width:28%;
-    margin: 10px;
-    padding: 90px 25px 25px;
-    font-size: 15px;
-}

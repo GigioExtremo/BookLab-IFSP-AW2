@@ -54,12 +54,28 @@ body {
  }
 
  input[type="text"]{
-     border-radius:12px 10px 10px;
-     width:500px;
+    
+     width:100%;
      height:40px; 
      border:1px rgb(122, 122, 122) solid;
-     margin-left:400px;
      margin-bottom:-5px;   
+ }
+
+ .pesq-container{
+     width:100%;
+     display: flex;
+     flex-direction: row;
+ }
+ .pesq{
+     background-color:rgb(63, 63, 63);
+     color:white; 
+     height:40px; 
+     width:40px;
+     cursor: pointer;
+ }
+
+ .pesq:hover{
+    background-color: #81AB85;
  }
 
  .container{
@@ -153,44 +169,44 @@ body {
     color: #fff;
 }
 
+.logo{
+    margin-top:-50px;
+  }
   
+  .user{
+    margin-left:80px;
+  }
+  
+  .prontuario{
+    color:#425C44;
+    font-size:16px;
+    font-weight: bold;
+    margin-left:15px;
+  }
+  
+  .footer{
+    background-color:#5f8162;
+    height:150px;
+    width:100%;
+    color:white;
+    font-size:18px;
+    text-align: center;
+    bottom:0;
+  }
  
  @media screen and (max-height: 450px) {
    .sidenav {padding-top: 15px;}
    .sidenav a {font-size: 18px;}
+
+   .conatiner{
+        flex-direction: column;
+   }
  }
 
-/*  Rodape */
-
-.rodape_final{
-    background-color:#81AB85;
-    color:white;
-    display:flex;
-    justify-content: space-around;
-    height: 120px;
-    width: 110%;
-    bottom:0;
-    float: bottom;
-}
-
-.div_rod{
-    font-size: 20px;
-    width:28%;
-    margin: 20px;
-    padding: 0px 25px 25px;
-}
-
-.email{
-    display:flex ;
-}
-
-.telefone{
-    display: flex;
-}
-
-.direit_rod{
-    width:28%;
-    margin: 10px;
-    padding: 90px 25px 25px;
-    font-size: 15px;
-}
+ @media screen and (max-width: 600px) {
+    .container{
+         flex-direction: column;
+        margin-left:-55%;
+    }
+ 
+  }

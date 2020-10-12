@@ -1,51 +1,22 @@
-body {
-    font-family: "Economica", sans-serif; 
-    background-color:rgb(245, 245, 245);
-}
 
- 
-.sidenav{
-    background-color:#81AB85;
-    height:100%;
-    width:15%;
-    border-radius:12px;
-    position: absolute;
-}
 
-.id{
-    color:white;
-    font-size:18px;
-    text-align:center;
-    margin-top:5px;
-}
-
-.userprofile img{
-    margin-top:50px;
-    margin-left:63px;
-}
-
-.content{
-    margin-top:70px;
-    font-size:25px;
-    text-align:center;
-}
-.content a{
- text-decoration:none;
- color:white;
-}
-
-.content a:hover{
-    color: rgb(216, 245, 218);
+.flex-container{
+    display:flex;
+    flex-wrap: wrap;
+    margin-left:20%;
 }
 
 .overall{
-    width:80%;
-    height:23%;
+    width:100%;
+    height:auto;
     background-color:white;
     border-radius:12px;
-    margin-left:240px;
     align-items:center;
     justify-content: center;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+    align-items:center;
+ 
 }
 
 .info{
@@ -56,7 +27,7 @@ body {
     margin-top:10px;
     float:left;
     border-radius:12px;
-    box-shadow:rgb(241, 170, 181);
+    flex-wrap:wrap;
 }
 
 .title{
@@ -70,31 +41,29 @@ body {
 
 .calendar{
     background-color:white;
-    height:35%;
+    height:200px;
     width:50%;
     border-radius:12px;
-    margin-left:240px;
+    margin-bottom:20px;
+    margin-right:20px;
 
+}
+
+.softwares-requisitados{
+    height:200px;
+    width:40%;
+    border-radius:12px;
+    background-color:white;
 }
 
 .req-sum{
     background-color:white;
-    height:30%;
-    width:80%;
+    height:auto;
+    width:100%;
     border-radius:12px;
-    margin-left:240px;
 }
 
-.naosei{
-    float:right;
-    background-color:rgb(138, 8, 8);
-    height:35%;
-    width:25%;
-    border-radius:12px;
-    margin-top:-250px;
-    display:none;
 
-}
 
 table{
     color:rgb(41, 41, 41);
@@ -142,42 +111,72 @@ td{
     float:right;
     margin-right:5px;
 }
- @media screen and (max-height: 450px) {
-   .sidenav {padding-top: 15px;}
-   .sidenav a {font-size: 18px;}
- }
 
-/*  Rodape */
 
-.rodape_final{
-    background-color:#81AB85;
-    color:white;
-    display:flex;
-    justify-content: space-around;
-    height: 120px;
-    width: 110%;
-    bottom:0;
-    float: bottom;
+
+  @media (max-width: 768px) { 
+
+
+ .container{
+        margin-left:5px;
+        width:100%;
 }
 
-.div_rod{
-    font-size: 20px;
-    width:28%;
-    margin: 20px;
-    padding: 0px 25px 25px;
+a#closebtn{
+    display: block;
 }
 
-.email{
-    display:flex ;
+.overall{
+    width:auto;
+    flex-direction: column;
+    height:auto;
+}
+.calendar{
+    width:100%;
+    flex-direction:column;
+}
+.softwares-requisitados{
+    width:100%;
+    flex-direction:column;
+    margin-bottom:20px;
+}
+.table-responsive {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  .table-responsive thead,
+  .table-responsive tbody,
+  .table-responsive th,
+  .table-responsive td,
+  .table-responsive tr {
+    display: block;
+  }
+  .table-responsive td,
+  .table-responsive th {
+    height: 35px;
+  }
+
+  .table-responsive thead {
+    float: left;
+  }
+
+  .table-responsive tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+
+  .table-responsive tbody tr {
+    display: inline-block;
+  }
+
+  .desc{
+      width:auto;
+  }
+
 }
 
-.telefone{
-    display: flex;
-}
-
-.direit_rod{
-    width:28%;
-    margin: 10px;
-    padding: 90px 25px 25px;
-    font-size: 15px;
-}
