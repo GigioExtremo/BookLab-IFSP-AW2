@@ -1,3 +1,17 @@
+<?php
+
+include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/cookies.php';
+include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/sessao.php';
+include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/constantes.php';
+include_once $_SERVER["DOCUMENT_ROOT"] . '/php/servicos/alertaService.php';
+include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/logger.php';
+
+if(!isset($_SESSION)) session_start();
+inicializa_sessao();
+
+?>
+
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -8,7 +22,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/estiloSoftware.css">
+    <link rel="stylesheet" type="text/css" href="../css/estiloSoftware.css">
 </head>
 
 <body>
@@ -17,18 +31,18 @@
 <div id="mySidenav" class="sidenav">
 
 <div class="user">
-    <img src="images/user.png" width="80px" height="80px">
-    <div class="prontuario">SP684557</div>
+    <img src="<?php echo "../api/banco_de_dados/imagens/" . $_SESSION[Constantes :: CaminhoFotoPerfil]; ?>" width="80px" height="80px">
+  <div class="prontuario"><?php echo $_SESSION[Constantes :: LoginCookie]; ?></div>
 </div>
 <a id="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
 <div class="content">
-    <a href="ti-index.php">Home</a>
-    <a href="ti-requisicoes.php"> Requisições</a>
-    <a href="ti-reservas.php">Reservas </a>
-    <a href="ti-laboratorio.php">Laboratórios</a>
-    <a href="ti-software.php">Softwares </a>
-    <a href="ti-mais-informacoes.php">Mais Informações</a>
-    <a href="logout.php">Sair</a>
+    <a href="index.php">Home</a>
+    <a href="requisicoes.php"> Requisições</a>
+    <a href="reservas.php">Reservas </a>
+    <a href="laboratorio.php">Laboratórios</a>
+    <a href="software.php">Softwares </a>
+    <a href="mais-informacoes.php">Mais Informações</a>
+    <a href="../logout.php">Sair</a>
 </div>
 </div>
 
@@ -51,7 +65,7 @@
 
             <div class="card">
                 <div class="img-container">
-                    <img src="images/geogebra.png" width="120px" height="120px">
+                    <img src="../images/geogebra.png" width="120px" height="120px">
                 </div>
                 <div class="info">
                     <span class="title">Geogebra</span>
@@ -62,7 +76,7 @@
 
             <div class="card">
                 <div class="img-container">
-                    <img src="images/xampp.png" width="100px" height="100px" id="imgxampp">
+                    <img src="../images/xampp.png" width="100px" height="100px" id="imgxampp">
                 </div>
                 <div class="info">
                     <span class="title">XAMPP</span>
@@ -73,7 +87,7 @@
 
             <div class="card">
                 <div class="img-container">
-                    <img src="images/photoshop.png" width="100px" height="100px" id="imgphoto">
+                    <img src="../images/photoshop.png" width="100px" height="100px" id="imgphoto">
                 </div>
                 <div class="info">
                     <span class="title">Photoshop</span>
@@ -86,7 +100,7 @@
         </div>
     </div>
 
-<script src="js/script.js"> </script>
+<script src="../js/script.js"> </script>
 
 </body>
 

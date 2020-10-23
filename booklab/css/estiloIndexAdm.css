@@ -37,20 +37,20 @@ margin-top:-80px;
 @media (max-width: 768px) { 
   
 
- .container{
-     display:column;
-     flex-wrap:wrap;
-     width:100%;
-     margin-left:20%;
- }
+    .container{
+        display:column;
+        flex-wrap:wrap;
+        width:100%;
+        margin-left:20%;
+    }
 
- .info{
+    .info{
     margin-bottom:20px;
- }
+    }
 
- .img-container2{
-   display:none;
- }
+    .img-container2{
+    display:none;
+    }
 
 
 }

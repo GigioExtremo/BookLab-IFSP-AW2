@@ -64,7 +64,6 @@
             "nomeUsuario": "Giovanni Dilly",
             "senhaUsuario": "senhaAdministrador1",
             "sexoUsuario": "M",
-            "tipoUsuario": "administrador",
             "nomeArquivoFoto": "generico/generic_user_male.png",
             "permissoes": [
                 "administrador", "tecnico", "professor"
@@ -104,6 +103,17 @@
             "idProfessor": "",
             "idSala": "",
             "qtdSemanasReserva": ""
+        }
+    ],
+    "requisição" : [
+        {
+            "idRequisicao" : "",
+            "idSocilicitante" : "",
+            "descricao": "",
+            "status": "",
+            "nomeDoSoftware" : "",
+            "dataLimite" : "",
+            "dataRequisicao": ""
         }
     ],
     "horarios": [

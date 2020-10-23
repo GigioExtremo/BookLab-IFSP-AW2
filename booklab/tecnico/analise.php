@@ -1,3 +1,17 @@
+<?php
+
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/cookies.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/sessao.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/constantes.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/servicos/alertaService.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/logger.php';
+
+  if(!isset($_SESSION)) session_start();
+inicializa_sessao();
+
+?>
+
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -6,8 +20,8 @@
     <link href="https://fonts.googleapis.com/css?family=Economica&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/estiloAnalise.css">
-    <link rel="stylesheet" type="text/css" href="css/estiloMenu.css">
+    <link rel="stylesheet" type="text/css" href="../css/estiloAnalise.css">
+    <link rel="stylesheet" type="text/css" href="../css/estiloMenu.css">
 </head>
 
 <body>
@@ -15,18 +29,18 @@
     <div id="mySidenav" class="sidenav">
 
         <div class="user">
-            <img src="images/user.png" width="80px" height="80px">
-            <div class="prontuario">SP684557</div>
+            <img src="<?php echo "../api/banco_de_dados/imagens/" . $_SESSION[Constantes :: CaminhoFotoPerfil]; ?>" width="80px" height="80px">
+            <div class="prontuario"><?php echo $_SESSION[Constantes :: LoginCookie]; ?></div>
         </div>
         <a id="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
         <div class="content">
-            <a href="ti-index.php">Home</a>
-            <a href="ti-requisicoes.php"> Requisições</a>
-            <a href="ti-reservas.php">Reservas </a>
-            <a href="ti-laboratorio.php">Laboratórios</a>
-            <a href="ti-software.php">Softwares </a>
-            <a href="ti-mais-informacoes.php">Mais Informações</a>
-            <a href="logout.php">Sair</a>
+            <a href="index.php">Home</a>
+            <a href="requisicoes.php"> Requisições</a>
+            <a href="reservas.php">Reservas </a>
+            <a href="laboratorio.php">Laboratórios</a>
+            <a href="software.php">Softwares </a>
+            <a href="mais-informacoes.php">Mais Informações</a>
+            <a href="../logout.php">Sair</a>
         </div>
     </div>
 
@@ -111,7 +125,7 @@
 
                 <br> <br>
                 <textarea class="addMotivo"> </textarea><br>
-                <button class="add"><i class="material-icons md-18">add_circle_outline</i> </button>
+                <button class="add" onClick="adicionaMotivo();"><i class="material-icons md-18">add_circle_outline</i> </button>
                 <label class="addLabel"> Adicionar Motivo</label>
                 </a>
             </div>
@@ -185,7 +199,7 @@
 
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

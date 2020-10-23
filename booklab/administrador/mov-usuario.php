@@ -1,3 +1,17 @@
+<?php
+
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/cookies.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/sessao.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/constantes.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/servicos/alertaService.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/logger.php';
+
+  if(!isset($_SESSION)) session_start();
+    inicializa_sessao();
+
+?>
+
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -6,14 +20,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="../css/flaticon.css">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Economica&display=swap" rel="stylesheet">
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/estiloLogsAdm.css">
-    <link rel="stylesheet" type="text/css" href="css/estiloMenu.css">
+    <link rel="stylesheet" type="text/css" href="../css/estiloLogsAdm.css">
+    <link rel="stylesheet" type="text/css" href="../css/estiloMenu.css">
 </head>
 
 <body>
@@ -63,18 +77,18 @@
     <div id="mySidenav" class="sidenav">
 
         <div class="user">
-            <img src="images/user.png" width="80px" height="80px">
-            <div class="prontuario">SP684557</div>
+            <img src="../images/user.png" width="80px" height="80px">
+          <div class="prontuario"><?php echo $_SESSION[Constantes :: LoginCookie]; ?></div>
         </div>
 
         <a id="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
         <div class="content">
-            <a href="adm-index.php">Home</a>
-            <a href="adm-mov-usuario.php" class="linkAtivo">Movimento de usuário</a>
-            <a href="adm-requisicoes.php">Requisições</a>
-            <a href="adm-reservas.php">Reservas</a>
-            <a href="adm-falhas.php">Falhas</a>
-            <a href="logout.php">Sair</a>
+            <a href="index.php">Home</a>
+            <a href="mov-usuario.php" class="linkAtivo">Movimento de usuário</a>
+            <a href="requisicoes.php">Requisições</a>
+            <a href="reservas.php">Reservas</a>
+            <a href="falhas.php">Falhas</a>
+            <a href="../logout.php">Sair</a>
         </div>
     </div>
 
@@ -171,7 +185,7 @@ crossorigin="anonymous"></script>
 integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 crossorigin="anonymous"></script>
 
-    <script src="js/script.js"> </script>
+    <script src="../js/script.js"> </script>
 </body>
 
 

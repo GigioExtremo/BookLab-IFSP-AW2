@@ -1,9 +1,22 @@
+<?php
+
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/constantes.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/sessao.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/cookies.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/servicos/alertaService.php';
+
+    if(!isset($_SESSION)) session_start();
+        inicializa_sessao();
+    
+
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="css/flaticon.css">
 
     <link href="https://fonts.googleapis.com/css?family=Economica&display=swap" rel="stylesheet">
     <meta charset="utf-8">
@@ -14,15 +27,13 @@
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-        <a href="index.html"><i class="flaticon-marketing"></i> Home</a>
-        <a href="reservas.html">Reservar Lab</a>
-        <a href="pesquisa.html">Pesquisar Sofware</a>
-        <a href="solicitacao.html"> Solicitar Software</a>
+        <a href="login.php">Logar</a>
     </div>
 
     <ul id="hlist">
         <li> <span id="menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; BOOKLAB </span></li>
     </ul>
+    
 
 
     <div class="cover">

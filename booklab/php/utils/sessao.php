@@ -1,8 +1,9 @@
 <?php
     include_once 'cookies.php';
+    
 
     function inicializa_sessao($usar_cookies = true) {
-        
+
         set_param_sessao("CRIACAO", time());
 
         if ($usar_cookies) {

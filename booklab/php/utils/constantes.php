@@ -14,10 +14,22 @@ class Constantes
     public const TokenLogin = "token_login";
     public const NomeCookie = "nome_cookie";
     public const CookieUndefined = "Cookie não existe. Erro 404";
+    public const AlertasAtuais = "alertas_atuais";
 
     //Sessão
     public const LembrarDaSessao = "sessao_vai_expirar";
     public const CaminhoFotoPerfil = "caminho_foto_perfil";
+
+    //Alertas
+    public const AlertaSucesso    = 'S';
+    public const AlertaInformacao = 'I';
+    public const AlertaAviso      = 'A';
+    public const AlertaPerigo     = 'P';
+    public const AlertaPrimario   = 'P1';
+    public const AlertaSecundario = 'S2';
+    public const AlertaEscuro     = 'E';
+    public const AlertaClaro      = 'C';
+
 }
 
 // Banco    

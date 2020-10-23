@@ -46,7 +46,7 @@
                 504 => "HTTP/1.1 504 Gateway Time-out"
             );
             header($http[$statusHTTP]);
-            header("Location:" . $urlPagina);
+            header("Location:" . /*$_SERVER['DOCUMENT_ROOT'] . '/' .*/ $urlPagina);
         }
 
         // function getUrlPagina($localizacaoArquivo) {

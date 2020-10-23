@@ -1,3 +1,17 @@
+<?php
+
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/cookies.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/sessao.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/constantes.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/servicos/alertaService.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/logger.php';
+
+  if(!isset($_SESSION)) session_start();
+inicializa_sessao();
+
+?>
+
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -11,32 +25,32 @@
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
 <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
 <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/estiloReservas.css">
-  <link rel="stylesheet" type="text/css" href="css/estiloFooter.css">
-  <link rel="stylesheet" type="text/css" href="css/flaticon.css">
+  <link rel="stylesheet" type="text/css" href="../css/estiloReservas.css">
+  <link rel="stylesheet" type="text/css" href="../css/estiloFooter.css">
+  <link rel="stylesheet" type="text/css" href="../css/flaticon.css">
 </head>
 
 <body>
 
 <div id="mySidenav" class="sidenav">
         <div class="logo">
-          <img src="images/ifsp.png" width="75px" height="75px">
+          <img src="../images/ifsp.png" width="75px" height="75px">
         </div>
     
         <br>
     
         <div class="user">
-          <img src="images/user3.png" width="80px" height="80px">
-          <div class="prontuario">SP684557</div>
+          <img src="<?php echo "../api/banco_de_dados/imagens/" . $_SESSION[Constantes :: CaminhoFotoPerfil]; ?>" width="80px" height="80px">
+        <div class="prontuario"><?php echo $_SESSION[Constantes :: LoginCookie]; ?></div>
         </div>
     
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-        <a href="prof-index.php"><span class="flaticon-browser">Home</span></a>
-        <a href="prof-reservar.php"> <span class="flaticon-agenda">Reservar Lab</span> </a>
-        <a href="prof-pesquisa-software.php"> <span class="flaticon-marketing">Pesquisar Software</span> </a>
-        <a href="prof-req-software.php"> <span class="flaticon-request">Solicitar Software</span> </a>
-        <a href="prof-requisicoes.php"> <span class="flaticon-interview">Minhas Requisições</span> </a>
-        <a href="prof-reservas.php"> <span class="flaticon-null">Minhas Reservas</span> </a>
+        <a href="index.php"><span class="flaticon-browser">Home</span></a>
+        <a href="reservar.php"> <span class="flaticon-agenda">Reservar Lab</span> </a>
+        <a href="pesquisa-software.php"> <span class="flaticon-marketing">Pesquisar Software</span> </a>
+        <a href="req-software.php"> <span class="flaticon-request">Solicitar Software</span> </a>
+        <a href="requisicoes.php"> <span class="flaticon-interview">Minhas Requisições</span> </a>
+        <a href="reservas.php"> <span class="flaticon-null">Minhas Reservas</span> </a>
       </div>
   <ul id="hlist">
     <li> <span id="menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; BOOKLAB </span></li>
@@ -107,7 +121,7 @@
       <p>
       <div class="lab">Laboratório 01</div>
       </p>
-      <img class="imgcard" src="images/pc2.png" alt="Tomate" style="width:60%">
+      <img class="imgcard" src="../images/pc2.png" alt="Tomate" style="width:60%">
       <div class="info"> <span class="title">Número de Cadeiras:</span> <span class="resp"> 15 </span> </div>
       <div class="info"> <span class="title">Número de Computadores:</span> <span class="resp">10</span> </div>
       <div class="info"> <span class="title">Bloco:</span> <span class="resp">D</span> </div>
@@ -119,7 +133,7 @@
       <p>
       <div class="lab">Laboratório 02</div>
       </p>
-      <img class="imgcard" src="images/pc2.png" alt="Tomate" style="width:60%">
+      <img class="imgcard" src="../images/pc2.png" alt="Tomate" style="width:60%">
       <div class="info"> <span class="title">Número de Cadeiras:</span> <span class="resp"> 15 </span> </div>
       <div class="info"> <span class="title">Número de Computadores:</span> <span class="resp">10</span> </div>
       <div class="info"> <span class="title">Bloco:</span> <span class="resp">C</span> </div>
@@ -139,7 +153,7 @@
       <p>
       <div class="lab">Laboratório 03</div>
       </p>
-      <img class="imgcard" src="images/pc2.png" alt="Tomate" style="width:60%">
+      <img class="imgcard" src="../images/pc2.png" alt="Tomate" style="width:60%">
       <div class="info"> <span class="title">Número de Cadeiras:</span> <span class="resp"> 15 </span> </div>
       <div class="info"> <span class="title">Número de Computadores:</span> <span class="resp">10</span> </div>
       <div class="info"> <span class="title">Bloco:</span> <span class="resp">H</span> </div>
@@ -165,12 +179,12 @@
 <div class="div_rod">
     <a>Contatos</a></br>
     <div class="email">
-        <img src="images/email.png" style="width:6.5%">
+        <img src="../images/email.png" style="width:6.5%">
         <a>booklab@gmail.com</a></br>
     </div>
 
     <div class="telefone">
-        <img src="images/telefone.png" style="width:5%">
+        <img src="../images/telefone.png" style="width:5%">
         <a>(11)9547-5321</a>
     </div>
 
@@ -183,7 +197,7 @@
 <div class="div_rod"></div>
 
 </footer>
-  <script type="text/javascript" src="js/script.js"> </script>
+  <script type="text/javascript" src="../js/script.js"> </script>
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

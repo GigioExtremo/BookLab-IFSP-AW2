@@ -36,18 +36,20 @@ class GenericBancoObject
 
 class GenericoBookLabDAO
 {
-    public const urlBanco = "../../api/banco_de_dados/bancoAlpha.json";
+    private function urlBanco() {
+        return $_SERVER["DOCUMENT_ROOT"] . "/api/banco_de_dados/bancoAlpha.json";
+    }
 
     public function returnBanco()
     {
-        $arquivoBanco = fopen(self::urlBanco, "r") or die("Não é possível abrir o arquivo!");
-        $jsonBanco = fread($arquivoBanco, filesize(self::urlBanco));
+        $arquivoBanco = fopen($this -> urlBanco(), "r") or die("Não é possível abrir o arquivo!");
+        $jsonBanco = fread($arquivoBanco, filesize($this -> urlBanco()));
         fclose($arquivoBanco);
         return $jsonBanco;
     }
 
     function mergeBancoDeDados($novoJson) {
-        $arquivoBanco = fopen($this->urlBanco, "w+") or die("Não é possível abrir o arquivo!"); // Abrimos o arquivo
+        $arquivoBanco = fopen($this -> urlBanco(), "w+") or die("Não é possível abrir o arquivo!"); // Abrimos o arquivo
         fwrite($arquivoBanco, json_encode($novoJson, JSON_PRETTY_PRINT)); // Sobreescrevemos ele
         fclose($arquivoBanco); // E fechamos ele
     }

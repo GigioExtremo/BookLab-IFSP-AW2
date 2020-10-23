@@ -1,37 +1,51 @@
+<?php
+
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/cookies.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/sessao.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/constantes.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/servicos/alertaService.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/logger.php';
+
+  if(!isset($_SESSION)) session_start();
+inicializa_sessao();
+
+?>
+
+<!DOCTYPE html>
 <html>
 
 <head>
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="../css/flaticon.css">
 
     <link href="https://fonts.googleapis.com/css?family=Economica&display=swap" rel="stylesheet">
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/estiloReqUser.css">
-    <link rel="stylesheet" type="text/css" href="css/estiloFooter.css">
-    <link rel="stylesheet" type="text/css" href="css/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="../css/estiloReqUser.css">
+    <link rel="stylesheet" type="text/css" href="../css/estiloFooter.css">
+    <link rel="stylesheet" type="text/css" href="../css/flaticon.css">
 </head>
 
 <body>
 
     <div id="mySidenav" class="sidenav">
         <div class="logo">
-          <img src="images/ifsp.png" width="75px" height="75px">
+          <img src="../images/ifsp.png" width="75px" height="75px">
         </div>
     
         <br>
     
         <div class="user">
-          <img src="images/user3.png" width="80px" height="80px">
-          <div class="prontuario">SP684557</div>
+          <img src="<?php echo "../api/banco_de_dados/imagens/" . $_SESSION[Constantes :: CaminhoFotoPerfil]; ?>" width="80px" height="80px">
+        <div class="prontuario"><?php echo $_SESSION[Constantes :: LoginCookie]; ?></div>
         </div>
     
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-        <a href="prof-index.php"><span class="flaticon-browser">Home</span></a>
-        <a href="prof-reservar.php"> <span class="flaticon-agenda">Reservar Lab</span> </a>
-        <a href="prof-pesquisa-software.php"> <span class="flaticon-marketing">Pesquisar Software</span> </a>
-        <a href="prof-req-software.php"> <span class="flaticon-request">Solicitar Software</span> </a>
-        <a href="prof-requisicoes.php"> <span class="flaticon-interview">Minhas Requisições</span> </a>
-        <a href="prof-reservas.php"> <span class="flaticon-null">Minhas Reservas</span> </a>
+        <a href="index.php"><span class="flaticon-browser">Home</span></a>
+        <a href="reservar.php"> <span class="flaticon-agenda">Reservar Lab</span> </a>
+        <a href="pesquisa-software.php"> <span class="flaticon-marketing">Pesquisar Software</span> </a>
+        <a href="req-software.php"> <span class="flaticon-request">Solicitar Software</span> </a>
+        <a href="requisicoes.php"> <span class="flaticon-interview">Minhas Requisições</span> </a>
+        <a href="reservas.php"> <span class="flaticon-null">Minhas Reservas</span> </a>
       </div>
     
     
@@ -95,12 +109,12 @@
 <div class="div_rod">
     <a>Contatos</a></br>
     <div class="email">
-        <img src="images/email.png" style="width:6.5%">
+        <img src="../images/email.png" style="width:6.5%">
         <a>booklab@gmail.com</a></br>
     </div>
 
     <div class="telefone">
-        <img src="images/telefone.png" style="width:5%">
+        <img src="../images/telefone.png" style="width:5%">
         <a>(11)9547-5321</a>
     </div>
 
@@ -114,7 +128,7 @@
 
 </footer>
 
-            <script type="text/javascript" src="js/script.js"> </script>
+            <script type="text/javascript" src="../js/script.js"> </script>
 
 
 

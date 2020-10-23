@@ -1,3 +1,17 @@
+<?php
+
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/cookies.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/sessao.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/constantes.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/servicos/alertaService.php';
+  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/logger.php';
+
+  if(!isset($_SESSION)) session_start();
+inicializa_sessao();
+
+?>
+
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -8,12 +22,12 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="../css/flaticon.css">
 
     <link href="https://fonts.googleapis.com/css?family=Economica&display=swap" rel="stylesheet">
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/estiloReqAdm.css">
-    <link rel="stylesheet" type="text/css" href="css/estiloMenu.css">
+    <link rel="stylesheet" type="text/css" href="../css/estiloReqAdm.css">
+    <link rel="stylesheet" type="text/css" href="../css/estiloMenu.css">
 </head>
 
 <body>
@@ -71,18 +85,18 @@
     <div id="mySidenav" class="sidenav">
 
         <div class="user">
-            <img src="images/user.png" width="80px" height="80px">
-            <div class="prontuario">SP684557</div>
+            <img src="../images/user.png" width="80px" height="80px">
+          <div class="prontuario"><?php echo $_SESSION[Constantes :: LoginCookie]; ?></div>
         </div>
 
         <a id="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
         <div class="content">
-            <a href="adm-index.php">Home</a>
-            <a href="adm-mov-usuario.php" class="linkAtivo">Movimento de usuário</a>
-            <a href="adm-requisicoes.php">Requisições</a>
-            <a href="adm-reservas.php">Reservas</a>
-            <a href="adm-falhas.php">Falhas</a>
-            <a href="logout.php">Sair</a>
+            <a href="index.php">Home</a>
+            <a href="mov-usuario.php" class="linkAtivo">Movimento de usuário</a>
+            <a href="requisicoes.php">Requisições</a>
+            <a href="reservas.php">Reservas</a>
+            <a href="falhas.php">Falhas</a>
+            <a href="../logout.php">Sair</a>
         </div>
     </div>
 
@@ -124,7 +138,7 @@
                 <td>25/05/2020</td>
                 <td>14:30-15:40  </td>
                 <td>MARIA</td>
-                <td> <a href="adm-detalhes-reservas.html"><img src="images/sid-view.png" width="30px" height="30px"> </td> </a>
+                <td> <a href="detalhes-reservas.php"><img src="../images/sid-view.png" width="30px" height="30px"> </td> </a>
             </tr>
 
             <tr>
@@ -133,7 +147,7 @@
                 <td>24/05/2020</td>
                 <td>16:30-17:40</td>
                 <td>JOÃO</td>
-                <td> <a href="adm-detalhes-reservas.html"><img src="images/sid-view.png" width="30px" height="30px"> </td> </a>
+                <td> <a href="detalhes-reservas.php"><img src="../images/sid-view.png" width="30px" height="30px"> </td> </a>
             </tr>
 
             <tr>
@@ -142,7 +156,7 @@
                 <td>25/07/2020</td>
                 <td>18:30-17:40</td>
                 <td>JAQUELINE</td>
-                <td> <a href="adm-detalhes-reservas.html"><img src="images/sid-view.png" width="30px" height="30px"> </td> </a>
+                <td> <a href="detalhes-reservas.php"><img src="../images/sid-view.png" width="30px" height="30px"> </td> </a>
             </tr>
             <tr>
                 <td>RES0004</td>
@@ -150,7 +164,7 @@
                 <td>24/05/2020</td>
                 <td>08:30-10:00</td>
                 <td>JOSÉ</td>
-                <td> <a href="adm-detalhes-reservas.html"><img src="images/sid-view.png" width="30px" height="30px"> </td> </a>
+                <td> <a href="detalhes-reservas.php"><img src="../images/sid-view.png" width="30px" height="30px"> </td> </a>
             </tr>
         </table>
 
@@ -166,7 +180,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
-    <script src="js/script.js"> </script>
+    <script src="../js/script.js"> </script>
 </body>
 
 

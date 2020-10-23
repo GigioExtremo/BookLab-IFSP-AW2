@@ -1,9 +1,9 @@
 <?php
-session_start();
 
 include 'bancoDAO.php';
-include_once '../utils/constantes.php';
-include_once '../utils/sessao.php';
+include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/constantes.php';
+include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/sessao.php';
+
 
 class UsuarioDAO extends GenericoBookLabDAO
 {
@@ -16,7 +16,7 @@ class UsuarioDAO extends GenericoBookLabDAO
         //que representa o perfil do usuário
         $usuarios = array_map(function ($dadosLogin) {
             $perfil = new stdClass();
-            $perfil->tipoUsuario = $dadosLogin["tipoUsuario"];
+            $perfil->tipoUsuario = $dadosLogin["permissoes"][0];
             $perfil->nome = $dadosLogin["nomeUsuario"];
             $perfil->prontuario = $dadosLogin["prontuarioUsuario"];
             $perfil->senha = $dadosLogin["senhaUsuario"];
