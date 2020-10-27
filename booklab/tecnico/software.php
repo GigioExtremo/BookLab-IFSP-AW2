@@ -42,6 +42,8 @@ inicializa_sessao();
     <a href="laboratorio.php">Laboratórios</a>
     <a href="software.php">Softwares </a>
     <a href="mais-informacoes.php">Mais Informações</a>
+    <a href="../professor/index.php">Mudar Para Professor</a>
+    <a href="../administrador/index.php">Mudar Para Administrador</a>
     <a href="../logout.php">Sair</a>
 </div>
 </div>

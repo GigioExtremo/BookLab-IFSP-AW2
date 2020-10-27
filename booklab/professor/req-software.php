@@ -45,6 +45,9 @@ inicializa_sessao();
         <a href="req-software.php"> <span class="flaticon-request">Solicitar Software</span> </a>
         <a href="requisicoes.php"> <span class="flaticon-interview">Minhas Requisições</span> </a>
         <a href="reservas.php"> <span class="flaticon-null">Minhas Reservas</span> </a>
+        <a href="../tecnico/index.php">Mudar Para Técnico</a>
+        <a href="../administrador/index.php">Mudar Para Administrador</a>
+        <a href="../logout.php">Sair</a>
       </div>
     
     <ul id="hlist"> 

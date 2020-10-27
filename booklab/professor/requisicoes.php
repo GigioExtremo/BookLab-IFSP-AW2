@@ -65,6 +65,9 @@ inicializa_sessao();
                   <td class="status"> Status</td>
                   <td class="previsao">Instalação</td>
                   <td class="edit">Visualizar</td>
+                  <a href="../tecnico/index.php">Mudar Para Técnico</a>
+                 <a href="../administrador/index.php">Mudar Para Administrador</a>
+                 <a href="../logout.php">Sair</a>
               </tr>
 
               <tr class="t-body">

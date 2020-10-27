@@ -88,6 +88,8 @@
             <a href="requisicoes.php">Requisições</a>
             <a href="reservas.php">Reservas</a>
             <a href="falhas.php">Falhas</a>
+            <a href="../tecnico/index.php">Mudar Para Técnico</a>
+            <a href="../professor/index.php">Mudar Para Professor</a>
             <a href="../logout.php">Sair</a>
         </div>
     </div>
