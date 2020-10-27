@@ -1,0 +1,30 @@
+body{
+    font-family: "Economica";
+}
+
+.titulo{
+    font-size:50px;
+    color:rgb(88, 80, 80);
+}
+
+.col-md-6{
+    align-items: center;
+    text-align:center;
+}
+
+.corpo{
+    font-size:25px;
+}
+
+.btn{
+    color:white;
+    background-color:rgb(66, 133, 172);
+    border:none;
+}
+
+.btn:hover{
+    background-color:rgb(111, 178, 218);
+    color:white;
+}
+
+.btn:

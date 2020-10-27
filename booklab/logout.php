@@ -11,7 +11,8 @@
 
     if (isset($_SESSION[Constantes :: LoginCookie])){
         session_unset();   
-        header("Location:index.php");
     }
+
+    header("Location:index.php");
     
 ?>

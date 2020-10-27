@@ -1,13 +1,15 @@
 <?php
 
-  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/cookies.php';
-  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/sessao.php';
-  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/constantes.php';
-  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/servicos/alertaService.php';
-  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/logger.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/cookies.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/sessao.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/constantes.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/servicos/alertaService.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/logger.php';
 
-  if(!isset($_SESSION)) session_start();
-inicializa_sessao();
+    if(!isset($_SESSION)) session_start();
+    
+    inicializa_sessao();
+	possui_permissao("administrador");
 
 ?>
 
@@ -131,7 +133,7 @@ inicializa_sessao();
 
         <a id="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
         <div class="content">
-            <a href="index.php">Home</a>
+            <a href="/administrador">Home</a>
             <a href="mov-usuario.php" class="linkAtivo">Movimento de usuário</a>
             <a href="requisicoes.php">Requisições</a>
             <a href="reservas.php">Reservas</a>

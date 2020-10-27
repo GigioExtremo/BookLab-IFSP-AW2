@@ -43,6 +43,9 @@
       AlertaService :: retiraAlerta ("ErroLogin");
     }
 
+    if (isset($_SESSION[Constantes :: LoginCookie]))
+      deleta_params_sessao();
+
     $logger -> logaMesg("Depois: " . json_encode($_SESSION));
 
   ?>

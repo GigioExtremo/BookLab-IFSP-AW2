@@ -1,6 +1,6 @@
 <?php
     include_once 'cookies.php';
-    
+    include_once $_SERVER["DOCUMENT_ROOT"] .  '/php/servicos/usuarioService.php';
 
     function inicializa_sessao($usar_cookies = true) {
 
@@ -15,6 +15,11 @@
                 // set_param_sessao(TokenLogin, $token_login);
             }
         }
+    }
+
+    function possui_permissao($tela) {
+        $usuarioService = new UsuarioService();
+        return $usuarioService -> possuiPermissao($tela);
     }
 
     function set_param_sessao($nome_param, $valor_param) {

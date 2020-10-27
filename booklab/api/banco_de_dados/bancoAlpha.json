@@ -13,60 +13,162 @@
     },
     "salas": [
         {
-            "idSala": "",
-            "qtdCadeiras": ""
+            "idSala": "01",
+            "qtdComputadores": 10,
+            "qtdCadeiras": 13
+        },
+        {
+            "idSala": "02",
+            "qtdComputadores": 10,
+            "qtdCadeiras": 13
+        },
+        {
+            "idSala": "03",
+            "qtdComputadores": 10,
+            "qtdCadeiras": 13
         }
     ],
     "computadores": [
         {
-            "idComputador": "",
-            "idSala": "",
-            "processador": "",
-            "tamMemoriaRAM": "",
-            "tamMemoriaDisco": "",
-            "placaDeVideo": "",
-            "tamMemoriaPlacaDeVideo": ""
+            "idComputador": "PC0001",
+            "idSala": "01",
+            "processador": "Intel Core i5",
+            "tamMemoriaRAM": "4 GB",
+            "tamMemoriaDisco": "1 TB",
+            "placaDeVideo": "Dedicada",
+            "tamMemoriaPlacaDeVideo": "2 GB"
+        },
+        {
+            "idComputador": "PC0002",
+            "idSala": "02",
+            "processador": "Intel Core i5",
+            "tamMemoriaRAM": "4 GB",
+            "tamMemoriaDisco": "1 TB",
+            "placaDeVideo": "Dedicada",
+            "tamMemoriaPlacaDeVideo": "2 GB"
+        },
+        {
+            "idComputador": "PC0003",
+            "idSala": "03",
+            "processador": "Intel Core i5",
+            "tamMemoriaRAM": "4 GB",
+            "tamMemoriaDisco": "1 TB",
+            "placaDeVideo": "Dedicada",
+            "tamMemoriaPlacaDeVideo": "2 GB"
         }
     ],
     "sistemasOperacionais": [
         {
-            "idSistemaOperacional": "",
-            "nome": "",
-            "versao": "",
-            "bits": ""
+            "idSistemaOperacional": "OS0001",
+            "nome": "Windows 10",
+            "versao": "October 2020",
+            "bits": "64"
         }
     ],
     "computadoresXsistemasOperacionais": [
         {
-            "idComputador": "",
-            "idSistemaOperacional": ""
+            "idComputador": "PC0001",
+            "idSistemaOperacional": "OS0001"
+        },
+        {
+            "idComputador": "PC0002",
+            "idSistemaOperacional": "OS0001"
+        },
+        {
+            "idComputador": "PC0003",
+            "idSistemaOperacional": "OS0001"
         }
     ],
     "softwares": [
         {
-            "idSoftware": "",
-            "nomeSoftware": "",
-            "versaoSoftware": "",
-            "dataInicioLicenca": "",
-            "dataExpiracaoLicenca": ""
+            "idSoftware": "SOFT0001",
+            "nomeSoftware": "Geogebra",
+            "descricaoSoftware": "Aplicativo de matemática para fazer operações em planos cartesianos.",
+            "versaoSoftware": "1.0.0",
+            "iconeSoftware": "geogebra.png",
+            "dataInicioLicenca": null,
+            "dataExpiracaoLicenca": null,
+            "foiInstalado": false
+        },
+        {
+            "idSoftware": "SOFT0002",
+            "nomeSoftware": "XAMPP",
+            "descricaoSoftware": "Aplicação para criar um servidor local para desenvolvimento.",
+            "versaoSoftware": "1.0.0",
+            "iconeSoftware": "xampp.png",
+            "dataInicioLicenca": null,
+            "dataExpiracaoLicenca": null,
+            "foiInstalado": false
+        },
+        {
+            "idSoftware": "SOFT0003",
+            "nomeSoftware": "Photoshop",
+            "descricaoSoftware": "Aplicativo de edição de fotos e imagens.",
+            "versaoSoftware": "1.0.0",
+            "iconeSoftware": "photoshop.png",
+            "dataInicioLicenca": null,
+            "dataExpiracaoLicenca": null,
+            "foiInstalado": false
         }
     ],
-    "computadoresXsoftwares": [
+    "salasXsoftwares": [
         {
-            "idComputador": "",
-            "idSoftware": ""
+            "idSala": "01",
+            "idSoftware": "SOFT0001"
+        },
+        {
+            "idSala": "02",
+            "idSoftware": "SOFT0001"
+        },
+        {
+            "idSala": "03",
+            "idSoftware": "SOFT0001"
+        },
+        {
+            "idSala": "02",
+            "idSoftware": "SOFT0002"
+        },
+        {
+            "idSala": "02",
+            "idSoftware": "SOFT0003"
+        },
+        {
+            "idSala": "03",
+            "idSoftware": "SOFT0002"
         }
     ],
     "usuarios" : [
         {
             "idUsuario" : 1,
             "prontuarioUsuario" : "SPXXXXXX",
-            "nomeUsuario": "Giovanni Dilly",
+            "nomeUsuario": "Giovanni Dilly ADM",
             "senhaUsuario": "senhaAdministrador1",
             "sexoUsuario": "M",
             "nomeArquivoFoto": "generico/generic_user_male.png",
             "permissoes": [
                 "administrador", "tecnico", "professor"
+            ]
+        },
+        {
+            "idUsuario" : 2,
+            "prontuarioUsuario" : "SP999999",
+            "nomeUsuario": "Giovanni Dilly Tecnico",
+            "senhaUsuario": "tecnico",
+            "sexoUsuario": "M",
+            "nomeArquivoFoto": "generico/generic_user_male.png",
+            "permissoes": [
+                "tecnico"
+            ]
+        },
+        {
+            "idUsuario" : 3,
+            "prontuarioUsuario" : "SP212121",
+            "nomeUsuario": "Giovanni Dilly Professor",
+            "senhaUsuario": "professor",
+            "sexoUsuario": "M",
+            "nomeArquivoFoto": "generico/generic_user_male.png",
+            "permissoes": [
+                "professor"
             ]
         }
     ],
@@ -105,15 +207,15 @@
             "qtdSemanasReserva": ""
         }
     ],
-    "requisição" : [
+    "requisicoes" : [
         {
-            "idRequisicao" : "",
-            "idSocilicitante" : "",
-            "descricao": "",
-            "status": "",
-            "nomeDoSoftware" : "",
-            "dataLimite" : "",
-            "dataRequisicao": ""
+            "idRequisicao" : "IFSP0001",
+            "idSolicitante" : 3,
+            "descricao": "Instala o Geogebra aí para nós kkk \n Por favor :)",
+            "status": "Enviado",
+            "idSoftware" : "SOFT0001",
+            "dataLimite" : "27/10/2020 23:59",
+            "dataRequisicao": "19/09/2020 11:10"
         }
     ],
     "horarios": [

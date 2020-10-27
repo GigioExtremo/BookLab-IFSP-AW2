@@ -8,6 +8,7 @@
 
   if(!isset($_SESSION)) session_start();
 inicializa_sessao();
+	possui_permissao("tecnico");
 
 ?>
 
@@ -15,7 +16,7 @@ inicializa_sessao();
 <html>
 
 <head>
-    <title>Laboratório</title>
+    <title>Laboratórios</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -120,7 +121,7 @@ inicializa_sessao();
 </div>
 <a id="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
 <div class="content">
-    <a href="index.php">Home</a>
+    <a href="/tecnico">Home</a>
     <a href="requisicoes.php"> Requisições</a>
     <a href="reservas.php">Reservas </a>
     <a href="laboratorio.php">Laboratórios</a>

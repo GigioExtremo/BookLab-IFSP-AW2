@@ -7,6 +7,9 @@
 
     if(!isset($_SESSION)) session_start();
         inicializa_sessao();
+
+    if (isset($_SESSION[Constantes :: LoginCookie]))
+        header("Location: " . $_SESSION[Constantes :: TipoUsuario]);
     
 
 ?>

@@ -8,13 +8,14 @@
 
   if(!isset($_SESSION)) session_start();
 inicializa_sessao();
+	possui_permissao("tecnico");
 
 ?>
 
 <!DOCTYPE html>
 <html> 
     <head> 
-        <title>Home</title>
+        <title>Mais Informações</title>
         <link rel="stylesheet" type="text/css" href="../css/flaticon.css">
 
         <link href="https://fonts.googleapis.com/css?family=Economica&display=swap" rel="stylesheet">
@@ -33,7 +34,7 @@ inicializa_sessao();
 </div>
 <a id="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
 <div class="content">
-    <a href="index.php">Home</a>
+    <a href="/tecnico">Home</a>
     <a href="requisicoes.php"> Requisições</a>
     <a href="reservas.php">Reservas </a>
     <a href="laboratorio.php">Laboratórios</a>

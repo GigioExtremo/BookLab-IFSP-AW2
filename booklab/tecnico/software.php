@@ -1,13 +1,20 @@
 <?php
 
-include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/cookies.php';
-include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/sessao.php';
-include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/constantes.php';
-include_once $_SERVER["DOCUMENT_ROOT"] . '/php/servicos/alertaService.php';
-include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/logger.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/cookies.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/sessao.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/constantes.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/servicos/alertaService.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/servicos/softwareService.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/logger.php';
 
-if(!isset($_SESSION)) session_start();
-inicializa_sessao();
+    if(!isset($_SESSION)) session_start();
+
+    inicializa_sessao();
+	possui_permissao("tecnico");
+
+    $softwareService = new SoftwareService();
+
+    $softwareCards = $softwareService -> getSoftwaresCards();
 
 ?>
 
@@ -36,7 +43,7 @@ inicializa_sessao();
 </div>
 <a id="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
 <div class="content">
-    <a href="index.php">Home</a>
+    <a href="/tecnico">Home</a>
     <a href="requisicoes.php"> Requisições</a>
     <a href="reservas.php">Reservas </a>
     <a href="laboratorio.php">Laboratórios</a>
@@ -62,41 +69,10 @@ inicializa_sessao();
         </div>
         <br><br>
         <div class="flex-container">
-
-            <div class="card">
-                <div class="img-container">
-                    <img src="../images/geogebra.png" width="120px" height="120px">
-                </div>
-                <div class="info">
-                    <span class="title">Geogebra</span>
-                    <div class="about"> Aplicativo de matemática dinâmica </div>
-                    <div class="about"> Disponibilidade: 07 </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="img-container">
-                    <img src="../images/xampp.png" width="100px" height="100px" id="imgxampp">
-                </div>
-                <div class="info">
-                    <span class="title">XAMPP</span>
-                    <div class="about"> Aplicação com os principais servidores </div>
-                    <div class="about"> Disponibilidade: 03 e 12</div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="img-container">
-                    <img src="../images/photoshop.png" width="100px" height="100px" id="imgphoto">
-                </div>
-                <div class="info">
-                    <span class="title">Photoshop</span>
-                    <div class="about"> Aplicativo de edição de fotos</div>
-                    <div class="about"> Disponibilidade: 01, 05 e 11</div>
-                </div>
-            </div>
-            
-
+            <?php
+                foreach($softwareCards as $card)
+                    echo $card;
+            ?>
         </div>
     </div>
 

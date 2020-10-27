@@ -8,6 +8,7 @@
 
   if(!isset($_SESSION)) session_start();
     inicializa_sessao();
+	possui_permissao("administrador");
 
 ?>
 
@@ -83,7 +84,7 @@
 
         <a id="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
         <div class="content">
-            <a href="index.php">Home</a>
+            <a href="/administrador">Home</a>
             <a href="mov-usuario.php" class="linkAtivo">Movimento de usuário</a>
             <a href="requisicoes.php">Requisições</a>
             <a href="reservas.php">Reservas</a>

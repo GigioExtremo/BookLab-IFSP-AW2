@@ -1,13 +1,25 @@
 <?php
 
-  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/cookies.php';
-  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/sessao.php';
-  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/constantes.php';
-  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/servicos/alertaService.php';
-  include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/logger.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/cookies.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/sessao.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/constantes.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/servicos/alertaService.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/servicos/requisicaoService.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/servicos/softwareService.php';
+    include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/logger.php';
 
-  if(!isset($_SESSION)) session_start();
-inicializa_sessao();
+    if(!isset($_SESSION)) session_start();
+
+    inicializa_sessao();
+	possui_permissao("tecnico");
+
+    $reqService = new RequisicaoService();
+
+    $softwareService = new SoftwareService();
+
+    $rows = $reqService -> getUltimasRequisicoesRows();
+
+    $softwaresMaisReqs = $softwareService -> getSoftwaresMaisRequisitados();
 
 ?>
 
@@ -15,7 +27,7 @@ inicializa_sessao();
 <html>
 
 <head>
-    <title>Home</title>
+    <title>Tecnico</title>
     <link rel="stylesheet" type="text/css" href="../css/flaticon.css">
 
     <link href="https://fonts.googleapis.com/css?family=Economica&display=swap" rel="stylesheet">
@@ -33,7 +45,7 @@ inicializa_sessao();
     </div>
     <a id="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
     <div class="content">
-        <a href="index.php">Home</a>
+        <a href="/tecnico">Home</a>
         <a href="requisicoes.php"> Requisições</a>
         <a href="reservas.php">Reservas </a>
         <a href="laboratorio.php">Laboratórios</a>
@@ -112,59 +124,32 @@ inicializa_sessao();
 
         <div class="softwares-requisitados">
             <div class="title"> Softwares Mais Requisitados</div>
+            <table class="table-responsive" style="padding-left: 15%; padding-right: 15%;">
+                <?php
+                    foreach($softwaresMaisReqs as $soft) {
+                        echo $soft;
+                    }
+
+                ?>
+            </table>
         </div>
 
         <div class="req-sum">
             <div class="title" id="req-title"> Requisições Recentes</div>
             <div class="request">
                 <table id="mes-passado" class="table-responsive">
-                    <tr class="data-title">
-                        <td class="cod"> Código</td>
-                        <td class="date"> Data</td>
-                        <td class="imp"> Importância</td>
-                        <td class="desc"> Descrição</td>
-                        <td class="status"> Status</td>
+                <tr class="data-title">
+                        <td class="cod">Código</td>
+                        <td class="date">Data Requisição</td>
+                        <td class="imp">Data Limite</td>
+                        <td class="desc">Descrição</td>
+                        <td class="status">Status</td>
                         <td class="edit">Visualizar</td>
                     </tr>
-
-                    <tr>
-                        <td>IFSP0001</td>
-                        <td>25/05/2020</td>
-                        <td>URGENTE</td>
-                        <td class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum arcu.
-                        </td>
-                        <td>PENDENTE</td>
-                        <td> <img src="../images/sid-view.png" width="30px" height="30px"> </td>
-                    </tr>
-
-                    <tr>
-                        <td>IFSP0002</td>
-                        <td>24/05/2020</td>
-                        <td>URGENTE</td>
-                        <td class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum arcu.
-                        </td>
-                        <td>EM ANÁLISE</td>
-                        <td> <img src="../images/sid-view.png" width="30px" height="30px"> </td>
-                    </tr>
-
-                    <tr>
-                        <td>IFSP0003</td>
-                        <td>24/05/2020</td>
-                        <td>URGENTE</td>
-                        <td class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum arcu.
-                        </td>
-                        <td>RECUSADA</td>
-                        <td> <img src="../images/sid-view.png" width="30px" height="30px"> </td>
-                    </tr>
-                    <tr>
-                        <td>IFSP0004</td>
-                        <td>24/05/2020</td>
-                        <td>URGENTE</td>
-                        <td class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum arcu.
-                        </td>
-                        <td>ACEITA</td>
-                        <td> <img src="../images/sid-view.png" width="30px" height="30px"> </td>
-                    </tr>
+                    <?php
+                        foreach($rows as $row)
+                            echo $row;
+                    ?>
                 </table>
             </div>
         </div>

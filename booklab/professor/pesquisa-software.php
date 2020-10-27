@@ -7,7 +7,10 @@
   include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/logger.php';
 
   if(!isset($_SESSION)) session_start();
-inicializa_sessao();
+    inicializa_sessao();
+    
+	
+	possui_permissao("professor");
 
 ?>
 
@@ -43,7 +46,7 @@ inicializa_sessao();
         </div>
     
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-        <a href="index.php"><span class="flaticon-browser">Home</span></a>
+        <a href="/professor"><span class="flaticon-browser">Home</span></a>
         <a href="reservar.php"> <span class="flaticon-agenda">Reservar Lab</span> </a>
         <a href="pesquisa-software.php"> <span class="flaticon-marketing">Pesquisar Software</span> </a>
         <a href="req-software.php"> <span class="flaticon-request">Solicitar Software</span> </a>

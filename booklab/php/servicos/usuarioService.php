@@ -54,19 +54,34 @@
 
         }
 
+        public function possuiPermissao($tela) {
 
-        // private function geraToken() {
-        //     $provider = new OAuthProvider();
+            if(!isset($_SESSION[Constantes :: LoginCookie])) {
+                $this -> redirecionaParaPagina(401, "../../erro/unauthorized.php");
+                return;
+            }
 
-        //     return bin2hex($provider->generateToken(16));
-        // }
+
+            $prontuarioUsuario = $_SESSION[Constantes :: LoginCookie];
+
+            $permissoes = $this -> usuarioDAO -> getPermissoes($prontuarioUsuario);
+
+            if (!isset($permissoes))
+                return null;
+
+            if (!in_array($tela, $permissoes))
+                $this -> redirecionaParaPagina(401, "../../erro/unathorized.php");
+            
+        }
+
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $usuarioService = new UsuarioService();
 
-        $prontuarioLogin = strtoupper($_POST["prontuario"]);
+        $prontuarioLogin = $_POST["prontuario"];
         $senhaLogin = $_POST["senha"];
+
         $lembrarSessao = false; 
         //($_POST["lembrarSessao"]? $_POST["lembrarSessao"] : "false") === "true"
         $usuarioService = new UsuarioService();

@@ -1,8 +1,9 @@
 <?php
 
-include 'bancoDAO.php';
+include_once 'bancoDAO.php';
 include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/constantes.php';
 include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/sessao.php';
+include_once $_SERVER["DOCUMENT_ROOT"] . '/php/utils/logger.php';
 
 
 class UsuarioDAO extends GenericoBookLabDAO
@@ -34,16 +35,39 @@ class UsuarioDAO extends GenericoBookLabDAO
             }
         );
 
-        // Caso a busca não tenha retornado nada, retornamos nulo
-        if (array_keys($usuarioLogin) !== [])
-            $usuarioLogin = $usuarioLogin[array_keys($usuarioLogin)[0]];
-        else 
-            $usuarioLogin = null;
+        return self :: getObjetoDoArrayFilter($usuarioLogin);
+    }
 
-        if (isset($usuarioLogin)) {
-            return $usuarioLogin;
-        } else {
+    public function getPermissoes($prontuarioUsuario) {
+        $jsonBanco = json_decode($this->returnBanco(), true);
+
+        $usuarioLogin = array_filter(
+            $jsonBanco["usuarios"],
+            function ($obj) use ($prontuarioUsuario) {
+                return ($obj["prontuarioUsuario"] === $prontuarioUsuario);
+            }
+        );
+
+
+        $usuarioLogin = self :: getObjetoDoArrayFilter($usuarioLogin);
+
+        if (!isset($usuarioLogin))
             return null;
-        }
+
+        return $usuarioLogin["permissoes"];
+
+    }
+
+    public function getUsuariosSolicitantes() 
+    {
+        $jsonBanco = json_decode($this->returnBanco(), true);
+
+        $usuariosSolicitantes = []; 
+        foreach ($jsonBanco["usuarios"] as $dadosUsuarios) {
+            $usuariosSolicitantes[$dadosUsuarios["idUsuario"]] = $dadosUsuarios["nomeUsuario"];
+        };
+
+        return $usuariosSolicitantes; 
+
     }
 }

@@ -60,6 +60,21 @@ class GenericoBookLabDAO
         });
     }
 
+    static function getObjetoDoArrayFilter($array_filtrado) {
+        // Caso a busca não tenha retornado nada, retornamos nulo
+        $objetoFiltrado = null;
+        if (array_keys($array_filtrado) !== [])
+            $objetoFiltrado = $array_filtrado[array_keys($array_filtrado)[0]];
+        else 
+            $objetoFiltrado = null;
+
+        if (isset($objetoFiltrado)) {
+            return $objetoFiltrado;
+        } else {
+            return null;
+        }
+    }
+
     public function insert(GenericBancoObject $objetoInsert)
     {
         $bancoJson = json_decode($this -> returnBanco());
